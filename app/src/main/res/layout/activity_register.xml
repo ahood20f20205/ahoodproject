@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/un"
+    tools:context=".Activity_register">
+
+    <TextView
+        android:id="@+id/rg20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-23dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="588dp"
+        android:gravity="center"
+        android:text="REGISTER"
+        android:textSize="34dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/na_20f"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="461dp"
+        android:gravity="center"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/co_20f"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="395dp"
+        android:gravity="center"
+        android:hint="Contact"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/Da_20f"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="330dp"
+        android:gravity="center"
+        android:hint="Date of Birth"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnInsert_20f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="213dp"
+        android:text="Insert New Data"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/btnUpdate_20f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="153dp"
+        android:text="Update Data"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/btn_20f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="91dp"
+        android:text="Delete Existing Data"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/btnView_20f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="27dp"
+        android:text="View Data"
+        android:textSize="24dp" />
+
+</RelativeLayout>
