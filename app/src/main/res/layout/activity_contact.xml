@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <include layout="@layout/appbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/jpg2"
+        tools:context=".ContactActivity">
+
+        <TextView
+            android:id="@+id/cont_ah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="537dp"
+            android:text="Contact Us"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/pag_20f"
+            style="@style/Material.Button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="57dp"
+            android:layout_marginBottom="300dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Go To Home Page"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="397dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

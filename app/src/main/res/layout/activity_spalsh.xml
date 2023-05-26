@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eb348c"
-    tools:context=".spalshActivity">
+    android:layout_gravity="center"
+    android:background="@drawable/ppp"
+    tools:context=".SplashActivity">
 
-    <ImageView
+    <!--<com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logo_id"
-        android:layout_width="376dp"
-
-        android:layout_height="435dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:scaleType="center"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/ppp" />
+        android:layout_marginTop="0dp"
+        android:src="@drawable/ppp"
+        android:contentDescription="@string/app_name" />-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo_id"
-        android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="78dp"
-        android:text="Splash Screen"
-        android:textSize="30dp" />
+        android:layout_marginTop="100dp"
+        android:text="@string/splash_screen"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
 
 </RelativeLayout>

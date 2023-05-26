@@ -18,7 +18,7 @@ public class Mainadvice2 extends AppCompatActivity {
         button_20f.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent h=new Intent(getApplicationContext(), Mainhomepage.class);
+                Intent h=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(h);
 
             }
