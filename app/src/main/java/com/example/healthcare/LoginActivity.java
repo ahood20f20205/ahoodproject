@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        db = new DBHelper(this);
+        db = DBHelper.getInstance(this);
 
         et_username = (EditText) findViewById(R.id.et_username);
         et_password = (EditText) findViewById(R.id.et_password);
@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 if (db.containsUsername(username)) {
                     if (db.containsPassword(password)) {
+                        PreferenceManager.getDefaultSharedPreferences(this).edit().putString("username", username).apply();
                         startActivity(new Intent(getBaseContext(), MainActivity.class));
                         finish();
                     } else {
@@ -53,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, "Wrong username or password!", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         textView_register.setOnClickListener(view -> {

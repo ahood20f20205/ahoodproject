@@ -34,11 +34,13 @@ public class RecordActivity extends AppCompatActivity {
         delete = findViewById(R.id.btn_delete);
         logout = findViewById(R.id.btn_logout);
 
-        db = new DBHelper(this);
+        db = DBHelper.getInstance(this);
 
-        Cursor res = db.getUser("a");
+        String username = PreferenceManager.getDefaultSharedPreferences(this).getString("username", "username");
+
+        Cursor res = db.getUser(username);// problem from here//
         if (res.getCount() == 0) {
-            Toast.makeText(RecordActivity.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
+            Toast.makeText(RecordActivity.this, "No user found!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -54,17 +56,24 @@ public class RecordActivity extends AppCompatActivity {
         delete.setOnClickListener(view -> {
             db.deleteAll();
             Toast.makeText(this, "Account deleted successfully!", Toast.LENGTH_SHORT).show();
-            /*String nameTXT = name.getText().toString();
-            Boolean isUpdated = db.deleteData(nameTXT);
-            if (isUpdated) Toast.makeText(RecordActivity.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
-            else Toast.makeText(RecordActivity.this, "Entry Not Deleted", Toast.LENGTH_SHORT).show();*/
-        });
-
-        logout.setOnClickListener(view -> {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         });
 
+        logout.setOnClickListener(view -> {
+            Toast.makeText(this, "logout successfully!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        });
+
+    }
+
+    //Inside the activity that makes a connection to the helper class
+    @Override
+    protected void onDestroy () {
+        super.onDestroy();
+        //call close() of the helper class
+        db.close();
     }
 }
 

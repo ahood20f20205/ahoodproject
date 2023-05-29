@@ -21,7 +21,7 @@
             app:srcCompat="@drawable/bg_3" />
 
         <TextView
-            android:id="@+id/rg20"
+            android:id="@+id/txt_heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -129,7 +129,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="160dp"
-            android:text="Already registered? "
+            android:text="@string/already_registered"
             android:textAllCaps="false"
             android:textSize="20sp" />
 
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/already_registered"
             android:layout_toEndOf="@id/already_registered"
-            android:text="Login here"
+            android:text="@string/login_here"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp" />

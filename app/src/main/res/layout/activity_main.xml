@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg"
+        android:background="@drawable/ah"
         tools:context=".MainActivity">
 
         <TextView
@@ -21,8 +21,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="591dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="524dp"
             android:gravity="center"
             android:text="Welcome to Ahood Mobile"
             android:textColor="@color/white"
@@ -30,14 +30,14 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="381dp"
+            android:layout_height="191dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="454dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="295dp"
             android:gravity="center"
             android:text="A health mobile solution to manage medical records, and get medical advice."
             android:textColor="@color/white"
@@ -49,10 +49,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="35dp"
-            android:layout_marginBottom="163dp"
+            android:layout_marginBottom="119dp"
             android:text="Medical Advice"
             android:textSize="25sp" />
 
@@ -62,10 +62,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="31dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="35dp"
-            android:layout_marginBottom="251dp"
+            android:layout_marginBottom="192dp"
             android:text="Manage Users"
             android:textSize="25sp" />
 
@@ -80,7 +80,7 @@
             android:layout_marginStart="35dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="35dp"
-            android:layout_marginBottom="75dp"
+            android:layout_marginBottom="43dp"
             android:text="Contact us"
             android:textSize="25sp" />
 

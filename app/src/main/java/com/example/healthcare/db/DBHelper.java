@@ -11,12 +11,26 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 public class DBHelper extends SQLiteOpenHelper {
-    public DBHelper(Context context) {
-        super(context, "user.db", null, 1);
+    private static DBHelper sInstance;
+    private SQLiteDatabase db;
+
+    public static DBHelper getInstance(Context context) {
+
+        // Use the application context, which will ensure that you 
+        // don't accidentally leak an Activity's context.
+        if (sInstance == null) {
+            sInstance = new DBHelper(context.getApplicationContext());
+        }
+        return sInstance;
+    }
+
+    private DBHelper(Context context) {
+        super(context, "my_user.db", null, 1);
     }
 
     @Override
     public void onCreate(@NonNull SQLiteDatabase db) {
+        this.db = db;
         db.execSQL("create Table user_table(name TEXT primary key, contact TEXT, dob TEXT, password TEXT)");
 
     }
@@ -24,6 +38,15 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(@NonNull SQLiteDatabase db, int i, int i1) {
         db.execSQL("drop Table if exists user_table");
+    }
+
+    //Inside your SQLite helper class
+    @Override
+    public synchronized void close() {
+        if (db != null) {
+            db.close();
+            super.close();
+        }
     }
 
     public Boolean insertUserData(String name, String contact, String dob, String password) {

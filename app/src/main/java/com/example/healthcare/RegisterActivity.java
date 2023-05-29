@@ -17,6 +17,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText et_username, et_contact, et_dob, et_password;
     Button btn_register;
+
+    TextView txt_heading;
     DBHelper db;
 
     TextView textView_login;
@@ -34,13 +36,16 @@ public class RegisterActivity extends AppCompatActivity {
         et_dob = findViewById(R.id.et_dob);
         et_password = findViewById(R.id.et_password);
 
+        txt_heading = findViewById(R.id.txt_heading);
+
         btn_register = findViewById(R.id.btn_register);
         textView_login = findViewById(R.id.login_text);
 
-        db = new DBHelper(this);
+        db = DBHelper.getInstance(this);
 
         boolean isToUpdate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("isToUpdate", true);
         if (isToUpdate) {
+            txt_heading.setText(R.string.update);
             btn_register.setText(R.string.update_account);
             btn_register.setOnClickListener(view -> {
                 String username = et_username.getText().toString();
@@ -56,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else Toast.makeText(this, "Entry Not Update", Toast.LENGTH_SHORT).show();
             });
         } else {
+            txt_heading.setText(R.string.register);
             btn_register.setText(R.string.register);
             btn_register.setOnClickListener(view -> {
                 String username = et_username.getText().toString();

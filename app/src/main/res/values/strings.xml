@@ -17,7 +17,10 @@
     <string name="contact_">contact :</string>
     <string name="name_">name :</string>
     <string name="user_account">User Account</string>
+    <string name="update">Update</string>
     <string name="update_account">Update account</string>
     <string name="delete_account">Delete account</string>
     <string name="logout">Logout</string>
+    <string name="already_registered">Already registered?</string>
+    <string name="login_here">Login here</string>
 </resources>
